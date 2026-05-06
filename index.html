@@ -1,0 +1,1346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <title>JezreelDenielMDavid | BSIT Graduate · E-Portfolio</title>
+  <meta name="description"
+    content="E-Portfolio of Jezreel David, Bachelor of Science in Information Technology graduate from Jose Rizal University. Passionate about web development and technology." />
+  <meta name="keywords"
+    content="Jezreel David, BSIT, Jose Rizal University, IT Graduate, E-Portfolio, Web Developer, Information Technology" />
+  <meta name="author" content="Jezreel David" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jezreel David | IT Graduate E-Portfolio" />
+  <meta property="og:description"
+    content="BSIT Graduate from Jose Rizal University. E-Portfolio showcasing skills, projects, and achievements." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23050a14'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='%2300d4ff' font-family='monospace' font-weight='900'>J</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Cursor glow style  (critical, tiny) -->
+  <style>
+    #cursor-glow {
+      position: fixed;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.07) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+      transition: left 0.08s, top 0.08s;
+    }
+  </style>
+</head>
+
+<body class="is-loading">
+
+  <!-- Cursor glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Particle field -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <div class="page-loader-binary" aria-hidden="true"></div>
+    <canvas class="page-loader-pixels" id="page-loader-pixels" aria-hidden="true"></canvas>
+    <div class="page-loader-grid" aria-hidden="true"></div>
+    <div class="page-loader-rings" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="page-loader-core">
+      <img src="assets/images/logo/Eport_Logo.png" alt="Jezreel David E-Portfolio logo" class="page-loader-logo" />
+      <p class="page-loader-title">BOOTING E-PORTFOLIO</p>
+      <p class="page-loader-subtitle">Initializing futuristic interface</p>
+      <div class="page-loader-bar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Jezreel David E-Portfolio Home">
+      <img src="assets/images/logo/Eport_Logo.png" alt="Jezreel David E-Portfolio logo" class="nav-logo-image" loading="eager" />JEZREEL.DEV
+    </a>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#about" id="nav-about">ABOUT</a></li>
+      <li><a href="#skills" id="nav-skills">SKILLS</a></li>
+      <li><a href="#projects" id="nav-projects">PROJECTS</a></li>
+      <li><a href="#certificates" id="nav-certificates">CERTS</a></li>
+      <li><a href="#contact" id="nav-contact" class="nav-cta">CONTACT</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          AVAILABLE FOR WORK &amp; COLLABORATION
+        </div>
+
+        <h1 class="hero-name">
+          Hi, I'm<br>
+          <span class="gradient-text">JEZREEL</span>
+        </h1>
+
+        <p class="hero-role">
+          &lt; <span id="typewriter" aria-live="polite">IT Graduate</span><span class="cursor"
+            aria-hidden="true"></span> /&gt;
+        </p>
+
+        <p class="hero-desc">
+          A passionate <strong>Bachelor of Science in Information Technology</strong> graduate
+          from <strong>Jose Rizal University</strong>, driven by a love for building smart,
+          elegant, and impactful technology solutions.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="hero-view-work">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            VIEW MY WORK
+          </a>
+          <a href="#contact" class="btn btn-outline" id="hero-contact">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            GET IN TOUCH
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value" data-count="4" data-suffix="+">0+</span>
+            <span class="stat-label">Years of Study</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count="5" data-suffix="+">0+</span>
+            <span class="stat-label">Projects Done</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count="8" data-suffix="+">0+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-card">
+          <div class="photo-ring" aria-hidden="true"></div>
+          <div class="photo-ring photo-ring-2" aria-hidden="true"></div>
+          <div class="photo-frame photo-corners">
+            <!-- ── Replace with your actual photo ── -->
+            <img src="assets/images/about/JezreelDavid.jpg"
+              alt="Jezreel David – BSIT Graduate placeholder profile photo" id="hero-profile-img" loading="eager" />
+            <div class="photo-overlay">
+              <span class="photo-label">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                &nbsp;BSIT · Jose Rizal University
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="about" class="section" aria-label="About me">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">// GET TO KNOW ME</p>
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Photo column -->
+        <div class="about-photo-wrap reveal-left">
+          <div class="about-photo glass-card">
+            <!-- ── Replace with your actual photo ── -->
+            <img src="assets/images/Graduation.png" alt="About – Jezreel David placeholder photo" id="about-profile-img"
+              loading="lazy" />
+          </div>
+          <div class="about-photo-badge glass-card">
+            <div class="about-photo-badge-num">JRU</div>
+            <div class="about-photo-badge-text">BSIT Graduate</div>
+          </div>
+        </div>
+
+        <!-- Info column -->
+        <div class="about-text reveal">
+          <p class="section-tag">// WHO I AM</p>
+          <h2>Jezreel Deniel<br><span>Manalang David</span></h2>
+          <p class="about-subtitle">
+            <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+            &nbsp;IT Professional · Full-Stack Developer · Tech Enthusiast
+          </p>
+
+          <p class="about-desc">
+            I am a dedicated and enthusiastic IT graduate driven by the desire to build
+            technology that makes a real difference. Throughout my academic journey at
+            <strong style="color:var(--text-primary)">Jose Rizal University</strong>, I have
+            developed a strong foundation in software development, networking, database management,
+            and modern web technologies. I believe in continuous learning and enjoy tackling
+            challenging problems with creative, efficient solutions.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <span class="about-info-label">FULL NAME</span>
+              <span class="about-info-value">Jezreel Deniel M. David</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">DEGREE</span>
+              <span class="about-info-value">BS Information Technology</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">UNIVERSITY</span>
+              <span class="about-info-value">Jose Rizal University</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">STATUS</span>
+              <span class="about-info-value" style="color:var(--accent2)">
+                <i class="fa-solid fa-circle" style="font-size:0.6rem;margin-right:5px"></i>
+                Graduate
+              </span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">LOCATION</span>
+              <span class="about-info-value">Philippines</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">INTEREST</span>
+              <span class="about-info-value">Web Dev · Networks · AI</span>
+            </div>
+          </div>
+
+          <!-- Education Block -->
+          <div class="education-block">
+            <span class="edu-badge">2021 – 2025</span>
+            <p class="edu-degree">
+              <i class="fa-solid fa-graduation-cap" style="color:var(--primary);margin-right:8px"
+                aria-hidden="true"></i>
+              Bachelor of Science in Information Technology
+            </p>
+            <p class="edu-school">
+              <i class="fa-solid fa-university" aria-hidden="true"></i>
+              Jose Rizal University (JRU)
+            </p>
+            <p class="edu-desc">
+              Completed a rigorous four-year program covering software engineering, data
+              structures, web development, computer networks, database systems, and IT
+              project management. Gained hands-on experience through capstone projects
+              and industry-level coursework.
+            </p>
+          </div>
+
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="#contact" class="btn btn-primary" id="about-hire-btn">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              HIRE ME
+            </a>
+            <button class="btn btn-outline" id="about-cv-btn" aria-label="Show resume in modal">
+              <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+              SHOW CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="skills" class="section" aria-label="Skills and technologies">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">// WHAT I KNOW</p>
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <!-- Skills Carousel Wrapper -->
+      <div class="skills-carousel-wrapper" aria-label="Skills carousel">
+
+        <!-- Prev / Next Controls -->
+        <button class="skills-carousel-btn skills-carousel-prev" id="skills-prev" aria-label="Previous skill category">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="skills-carousel-btn skills-carousel-next" id="skills-next" aria-label="Next skill category">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Slide Counter -->
+        <div class="skills-carousel-counter" aria-live="polite">
+          <span id="skills-current">1</span> / <span id="skills-total">5</span>
+        </div>
+
+        <!-- Track -->
+        <div class="skills-carousel-track-outer">
+          <div class="skills-carousel-track" id="skills-carousel-track">
+
+            <!-- Slide 1 · Web Development -->
+            <div class="skills-carousel-slide">
+              <article class="skill-category glass-card" aria-label="Web development skills">
+                <div class="skill-cat-header">
+                  <div class="skill-cat-icon blue" aria-hidden="true">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                  <h3 class="skill-cat-title">WEB DEVELOPMENT</h3>
+                </div>
+                <!-- HTML and CSS3 proficiency -->
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">HTML5 / CSS3</span>
+                    <span class="skill-pct">90%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill blue" data-pct="90" aria-label="HTML5 CSS3 proficiency 90%"></div>
+                  </div>
+                </div>
+                <!-- JavaScript proficiency -->
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-pct">78%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill blue" data-pct="78" aria-label="JavaScript proficiency 78%"></div>
+                  </div>
+                </div>
+                <!-- PHP / Laravel proficiency -->
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">PHP / Laravel</span>
+                    <span class="skill-pct">72%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill blue" data-pct="72" aria-label="PHP Laravel proficiency 72%"></div>
+                  </div>
+                </div>
+                <!-- React.js proficiency -->
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">React.js</span>
+                    <span class="skill-pct">65%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill blue" data-pct="65" aria-label="React.js proficiency 65%"></div>
+                  </div>
+                </div>
+                <div class="tech-badges" role="list" aria-label="Web technologies">
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-html5"></i> HTML5</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-js"></i> JavaScript</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-php"></i> PHP</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-react"></i> React</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-vuejs"></i> Vue.js</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-vuejs"></i> Inertia.js</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-laravel"></i> Laravel</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-vuejs"></i> TailwindCSS</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Slide 2 · Database & Backend -->
+            <div class="skills-carousel-slide">
+              <article class="skill-category glass-card" aria-label="Database and backend skills">
+                <div class="skill-cat-header">
+                  <div class="skill-cat-icon purple" aria-hidden="true">
+                    <i class="fa-solid fa-database"></i>
+                  </div>
+                  <h3 class="skill-cat-title">DATABASE &amp; BACKEND</h3>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">MySQL</span>
+                    <span class="skill-pct">85%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill purple" data-pct="85" aria-label="MySQL proficiency 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">SQL Server / T-SQL</span>
+                    <span class="skill-pct">75%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill purple" data-pct="75" aria-label="SQL Server proficiency 75%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Node.js / Express</span>
+                    <span class="skill-pct">60%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill purple" data-pct="60" aria-label="Node.js proficiency 60%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-pct">68%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill purple" data-pct="68" aria-label="Python proficiency 68%"></div>
+                  </div>
+                </div>
+                <div class="tech-badges" role="list" aria-label="Backend technologies">
+                  <span class="tech-badge" role="listitem"><i class="fa-solid fa-database"></i> MySQL</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-python"></i> Python</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-solid fa-server"></i> SQL Server</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Slide 3 · Networking & Systems -->
+            <div class="skills-carousel-slide">
+              <article class="skill-category glass-card" aria-label="Networking and systems skills">
+                <div class="skill-cat-header">
+                  <div class="skill-cat-icon green" aria-hidden="true">
+                    <i class="fa-solid fa-network-wired"></i>
+                  </div>
+                  <h3 class="skill-cat-title">NETWORKING &amp; SYSTEMS</h3>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Computer Networks</span>
+                    <span class="skill-pct">60%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill green" data-pct="60" aria-label="Computer Networks proficiency 60%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Linux / Ubuntu</span>
+                    <span class="skill-pct">40%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill green" data-pct="40" aria-label="Linux proficiency 40%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Cybersecurity Basics</span>
+                    <span class="skill-pct">50%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill green" data-pct="50" aria-label="Cybersecurity proficiency 50%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Cloud Fundamentals</span>
+                    <span class="skill-pct">55%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill green" data-pct="55" aria-label="Cloud fundamentals proficiency 55%"></div>
+                  </div>
+                </div>
+                <div class="tech-badges" role="list" aria-label="Networking technologies">
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-linux"></i> Linux</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-solid fa-wifi"></i> TCP/IP</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-aws"></i> AWS</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-solid fa-shield-halved"></i> Cisco Basics</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Slide 4 · Tools & Soft Skills -->
+            <div class="skills-carousel-slide">
+              <article class="skill-category glass-card" aria-label="Tools and soft skills">
+                <div class="skill-cat-header">
+                  <div class="skill-cat-icon red" aria-hidden="true">
+                    <i class="fa-solid fa-toolbox"></i>
+                  </div>
+                  <h3 class="skill-cat-title">TOOLS &amp; SOFT SKILLS</h3>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Git / GitHub</span>
+                    <span class="skill-pct">82%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill red" data-pct="82" aria-label="Git proficiency 82%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Problem Solving</span>
+                    <span class="skill-pct">60%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill red" data-pct="60" aria-label="Problem solving proficiency 60%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">UI/UX Design Basics</span>
+                    <span class="skill-pct">70%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill red" data-pct="70" aria-label="UI UX proficiency 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Project Management</span>
+                    <span class="skill-pct">75%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill red" data-pct="75" aria-label="Project management proficiency 75%"></div>
+                  </div>
+                </div>
+                <div class="tech-badges" role="list" aria-label="Tools">
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-git-alt"></i> Git</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-figma"></i> Figma</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-brands fa-github"></i> GitHub</span>
+                  <span class="tech-badge" role="listitem"><i class="fa-solid fa-diagram-project"></i> Agile</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Slide 5 · NLP & Machine Learning (AI-themed) -->
+            <div class="skills-carousel-slide">
+              <article class="skill-category glass-card ai-card" aria-label="NLP and Machine Learning skills">
+                <div class="skill-cat-header">
+                  <div class="skill-cat-icon ai" aria-hidden="true">
+                    <i class="fa-solid fa-brain"></i>
+                  </div>
+                  <h3 class="skill-cat-title ai-title">NLP &amp; MACHINE LEARNING</h3>
+                </div>
+                <!-- Python for ML -->
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">Python (ML / NLP)</span>
+                    <span class="skill-pct ai-pct">75%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill ai" data-pct="75" aria-label="Python ML proficiency 75%"></div>
+                  </div>
+                </div>
+                <!-- BERT / Transformers -->
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">BERT / Transformers</span>
+                    <span class="skill-pct ai-pct">65%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill ai" data-pct="65" aria-label="BERT Transformers proficiency 65%"></div>
+                  </div>
+                </div>
+                <!-- LangChain -->
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">LangChain / LLM APIs</span>
+                    <span class="skill-pct ai-pct">60%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill ai" data-pct="60" aria-label="LangChain proficiency 60%"></div>
+                  </div>
+                </div>
+                <!-- scikit-learn -->
+                <div class="skill-bar-item">
+                  <div class="skill-bar-meta">
+                    <span class="skill-name">scikit-learn / Pandas</span>
+                    <span class="skill-pct ai-pct">70%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-fill ai" data-pct="70" aria-label="scikit-learn proficiency 70%"></div>
+                  </div>
+                </div>
+                <div class="tech-badges" role="list" aria-label="AI and ML technologies">
+                  <span class="tech-badge ai-badge" role="listitem"><i class="fa-brands fa-python"></i> Python</span>
+                  <span class="tech-badge ai-badge" role="listitem"><i class="fa-solid fa-brain"></i> BERT</span>
+                  <span class="tech-badge ai-badge" role="listitem"><i class="fa-solid fa-robot"></i> LangChain</span>
+                  <span class="tech-badge ai-badge" role="listitem"><i class="fa-solid fa-chart-line"></i>
+                    scikit-learn</span>
+                  <span class="tech-badge ai-badge" role="listitem"><i class="fa-solid fa-microchip"></i>
+                    HuggingFace</span>
+                  <span class="tech-badge ai-badge" role="listitem"><i class="fa-solid fa-network-wired"></i> GPT
+                    APIs</span>
+                </div>
+              </article>
+            </div>
+
+          </div><!-- /skills-carousel-track -->
+        </div><!-- /track-outer -->
+
+        <!-- Dot Indicators -->
+        <div class="skills-carousel-dots" id="skills-dots" role="tablist" aria-label="Skill category slides">
+          <button class="skills-dot active" data-index="0" role="tab" aria-selected="true"
+            aria-label="Slide 1: Web Development"></button>
+          <button class="skills-dot" data-index="1" role="tab" aria-selected="false"
+            aria-label="Slide 2: Database and Backend"></button>
+          <button class="skills-dot" data-index="2" role="tab" aria-selected="false"
+            aria-label="Slide 3: Networking and Systems"></button>
+          <button class="skills-dot" data-index="3" role="tab" aria-selected="false"
+            aria-label="Slide 4: Tools and Soft Skills"></button>
+          <button class="skills-dot" data-index="4" role="tab" aria-selected="false"
+            aria-label="Slide 5: NLP and Machine Learning"></button>
+        </div>
+
+      </div><!-- /skills-carousel-wrapper -->
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="projects" class="section" aria-label="Projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">// WHAT I'VE BUILT</p>
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <!-- ── Vertical Coverflow Carousel Layout ── -->
+      <div class="proj-carousel-layout" id="proj-carousel-layout">
+
+        <!-- LEFT: Vertical thumbnail strip -->
+        <div class="proj-strip-wrap" aria-label="Project navigation strip" role="listbox" aria-orientation="vertical">
+
+          <div class="proj-strip-line" aria-hidden="true"></div>
+
+          <button class="proj-nav-btn proj-nav-up" id="proj-nav-up" aria-label="Previous project">
+            <i class="fa-solid fa-chevron-up"></i>
+          </button>
+
+          <div class="proj-strip-viewport">
+            <div class="proj-strip-track" id="proj-strip-track">
+
+              <div class="proj-thumb is-active" data-index="0" role="option" aria-selected="true" tabindex="0" id="proj-thumb-0">
+                <div class="proj-thumb-img"><img src="assets/images/projects/Pasignae.png" alt="" loading="lazy" /></div>
+                <div class="proj-thumb-info">
+                  <span class="proj-thumb-num">01</span>
+                  <span class="proj-thumb-name">PASIGNAE Web Portal</span>
+                </div>
+                <div class="proj-thumb-glow" aria-hidden="true"></div>
+              </div>
+
+              <div class="proj-thumb" data-index="1" role="option" aria-selected="false" tabindex="-1" id="proj-thumb-1">
+                <div class="proj-thumb-img"><img src="assets/images/projects/DBI.png" alt="" loading="lazy" /></div>
+                <div class="proj-thumb-info">
+                  <span class="proj-thumb-num">02</span>
+                  <span class="proj-thumb-name">Project Management Sys</span>
+                </div>
+                <div class="proj-thumb-glow" aria-hidden="true"></div>
+              </div>
+
+              <div class="proj-thumb" data-index="2" role="option" aria-selected="false" tabindex="-1" id="proj-thumb-2">
+                <div class="proj-thumb-img"><img src="assets/images/project-3.png" alt="" loading="lazy" /></div>
+                <div class="proj-thumb-info">
+                  <span class="proj-thumb-num">03</span>
+                  <span class="proj-thumb-name">Sentiment Analysis</span>
+                </div>
+                <div class="proj-thumb-glow" aria-hidden="true"></div>
+              </div>
+
+              <div class="proj-thumb" data-index="3" role="option" aria-selected="false" tabindex="-1" id="proj-thumb-3">
+                <div class="proj-thumb-img"><img src="assets/images/projects/EnergAIze.png" alt="" loading="lazy" /></div>
+                <div class="proj-thumb-info">
+                  <span class="proj-thumb-num">04</span>
+                  <span class="proj-thumb-name">EnergAIze Hackathon</span>
+                </div>
+                <div class="proj-thumb-glow" aria-hidden="true"></div>
+              </div>
+
+              <div class="proj-thumb" data-index="4" role="option" aria-selected="false" tabindex="-1" id="proj-thumb-4">
+                <div class="proj-thumb-img"><img src="assets/images/project-3.png" alt="" loading="lazy" /></div>
+                <div class="proj-thumb-info">
+                  <span class="proj-thumb-num">05</span>
+                  <span class="proj-thumb-name">LangChain Chatbot</span>
+                </div>
+                <div class="proj-thumb-glow" aria-hidden="true"></div>
+              </div>
+
+            </div><!-- /proj-strip-track -->
+          </div><!-- /proj-strip-viewport -->
+
+          <button class="proj-nav-btn proj-nav-down" id="proj-nav-down" aria-label="Next project">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="proj-strip-counter" aria-live="polite">
+            <span id="proj-current">1</span><span class="proj-sep">/</span><span id="proj-total">5</span>
+          </div>
+
+        </div><!-- /proj-strip-wrap -->
+
+        <!-- RIGHT: Full project card display -->
+        <div class="proj-display-wrap" id="proj-display-wrap" aria-live="polite">
+
+          <div class="proj-display-scanbeam" aria-hidden="true"></div>
+
+          <!-- Project 1 -->
+          <article class="project-card glass-card proj-display-card is-active" data-proj-index="0" aria-label="Project: PASIGNAE Web Portal">
+            <div class="project-img">
+              <img src="assets/images/projects/Pasignae.png" alt="PASIGNAE Web Portal" id="project1-img" loading="lazy" />
+              <div class="project-img-overlay">
+                <span class="project-tag">WEB APP</span>
+                <span class="project-tag">CAPSTONE</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">PASIGNAE: Web Portal</h3>
+              <p class="project-desc">A full-stack web application developed as a capstone project. Enables campus-wide management of student records, scheduling, announcements, and faculty data through a unified dashboard interface.</p>
+              <div class="project-stack" role="list" aria-label="Technologies used">
+                <span class="project-tech" role="listitem">PHP</span>
+                <span class="project-tech" role="listitem">MySQL</span>
+                <span class="project-tech" role="listitem">TailwindCSS</span>
+                <span class="project-tech" role="listitem">JavaScript</span>
+                <span class="project-tech" role="listitem">Hostinger</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/JezreelDavid-BucDevGin/PASIGNAE-Web_Portal_TheBinary101.git" class="project-link" id="proj1-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="projects/pasignae-web-portal.html" class="project-link" id="proj1-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card proj-display-card" data-proj-index="1" aria-label="Project: Dedicated Project Management System">
+            <div class="project-img">
+              <img src="assets/images/projects/DBI.png" alt="Project Management System" id="project2-img" loading="lazy" />
+              <div class="project-img-overlay">
+                <span class="project-tag">FULL-STACK</span>
+                <span class="project-tag">INTERNSHIP</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Dedicated Project Management System</h3>
+              <p class="project-desc">A modern, fully responsive project management system built with Vue.js and Laravel. Features dynamic task boards, team management, and real-time collaboration tools.</p>
+              <div class="project-stack" role="list" aria-label="Technologies used">
+                <span class="project-tech" role="listitem">Vue.js</span>
+                <span class="project-tech" role="listitem">Inertia.js</span>
+                <span class="project-tech" role="listitem">Laravel</span>
+                <span class="project-tech" role="listitem">TailwindCSS</span>
+                <span class="project-tech" role="listitem">MariaDB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" class="project-link" id="proj2-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="projects/project-management-system.html" class="project-link" id="proj2-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card proj-display-card" data-proj-index="2" aria-label="Project: Sentiment Analysis and Topic Modeling System">
+            <div class="project-img">
+              <img src="assets/images/project-3.png" alt="Sentiment Analysis System" id="project3-img" loading="lazy" />
+              <div class="project-img-overlay">
+                <span class="project-tag">AI / ML</span>
+                <span class="project-tag">NLP</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Sentiment Analysis &amp; Topic Modeling System</h3>
+              <p class="project-desc">An NLP pipeline that performs sentiment analysis and topic modeling on large text datasets using BERT transformers and HuggingFace, with rich interactive visualizations.</p>
+              <div class="project-stack" role="list" aria-label="Technologies used">
+                <span class="project-tech" role="listitem">Python</span>
+                <span class="project-tech" role="listitem">BERT</span>
+                <span class="project-tech" role="listitem">HuggingFace</span>
+                <span class="project-tech" role="listitem">Pandas</span>
+                <span class="project-tech" role="listitem">Matplotlib</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/JezreelDavid-BucDevGin/COLLEGE_EXIT_FORM_DETECTION-JRU_Guidance-TripleKill.git" class="project-link" id="proj3a-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="projects/sentiment-analysis.html" class="project-link" id="proj3a-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass-card proj-display-card" data-proj-index="3" aria-label="Project: EnergAIze-Meralco Hackathon 2024">
+            <div class="project-img">
+              <img src="assets/images/projects/EnergAIze.png" alt="EnergAIze Hackathon 2024" id="project4-img" loading="lazy" />
+              <div class="project-img-overlay">
+                <span class="project-tag">HACKATHON</span>
+                <span class="project-tag">AI</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">EnergAIze-Meralco Hackathon 2024</h3>
+              <p class="project-desc">A hackathon entry for Meralco's EnergAIze 2024 competition. Developed an AI-powered energy optimization system using machine learning and predictive analytics.</p>
+              <div class="project-stack" role="list" aria-label="Technologies used">
+                <span class="project-tech" role="listitem">HTML</span>
+                <span class="project-tech" role="listitem">CSS</span>
+                <span class="project-tech" role="listitem">JavaScript</span>
+                <span class="project-tech" role="listitem">Python</span>
+                <span class="project-tech" role="listitem">scikit-learn</span>
+                <span class="project-tech" role="listitem">BERT</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/JezreelDavid-BucDevGin/EnergAIze-Meralco_Hackathon_Innovecom.git" class="project-link" id="proj4-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="projects/energaize-hackathon.html" class="project-link" id="proj4-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card glass-card proj-display-card" data-proj-index="4" aria-label="Project: Chatbot Development Using LangChain">
+            <div class="project-img">
+              <img src="assets/images/project-3.png" alt="LangChain Chatbot" id="project5-img" loading="lazy" />
+              <div class="project-img-overlay">
+                <span class="project-tag">LLM</span>
+                <span class="project-tag">CHATBOT</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-name">Chatbot Development Using LangChain</h3>
+              <p class="project-desc">A conversational AI chatbot built with LangChain and open-source LLMs including GPT-2, GPT-Neo, and T5-small. Supports multi-turn dialogue and contextual responses.</p>
+              <div class="project-stack" role="list" aria-label="Technologies used">
+                <span class="project-tech" role="listitem">LangChain</span>
+                <span class="project-tech" role="listitem">Hugging Face</span>
+                <span class="project-tech" role="listitem">GPT-2</span>
+                <span class="project-tech" role="listitem">GPT-Neo</span>
+                <span class="project-tech" role="listitem">T5-small</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/JezreelDavid-BucDevGin/ChatBot-langchain-Jezreel_David.git" class="project-link" id="proj5-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="projects/langchain-chatbot.html" class="project-link" id="proj5-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /proj-display-wrap -->
+      </div><!-- /proj-carousel-layout -->
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       CERTIFICATES SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="certificates" class="section" aria-label="Certificates and achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">// CREDENTIALS &amp; ACHIEVEMENTS</p>
+        <h2 class="section-title">My <span>Certificates</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <!-- Certificate Grid -->
+      <div class="cert-grid" role="list" aria-label="Certificate list">
+
+        <!-- Certificate 1 -->
+        <button
+          class="cert-tile reveal"
+          id="cert-tile-1"
+          role="listitem"
+          aria-label="Open certificate: DICT Software Development NC IV"
+          data-cert-id="1"
+          data-cert-title="DICT Software Development NC IV"
+          data-cert-issuer="Department of Information and Communications Technology"
+          data-cert-year="2024"
+          data-cert-img="assets/images/certificates/cert-1.png"
+        >
+          <div class="cert-tile-inner">
+            <div class="cert-tile-icon" aria-hidden="true">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="cert-tile-shine" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tr" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-bl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-br" aria-hidden="true"></div>
+            <div class="cert-tile-scan" aria-hidden="true"></div>
+            <div class="cert-tile-body">
+              <span class="cert-tile-tag">TESDA</span>
+              <h3 class="cert-tile-title">DICT Software<br>Development NC IV</h3>
+              <p class="cert-tile-issuer">Dept. of ICT · 2024</p>
+            </div>
+            <div class="cert-tile-btn" aria-hidden="true">
+              <i class="fa-solid fa-expand"></i> VIEW
+            </div>
+          </div>
+        </button>
+
+        <!-- Certificate 2 -->
+        <button
+          class="cert-tile reveal"
+          id="cert-tile-2"
+          role="listitem"
+          aria-label="Open certificate: Cisco Networking Essentials"
+          data-cert-id="2"
+          data-cert-title="Cisco Networking Essentials"
+          data-cert-issuer="Cisco Networking Academy"
+          data-cert-year="2023"
+          data-cert-img="assets/images/certificates/cert-2.png"
+        >
+          <div class="cert-tile-inner">
+            <div class="cert-tile-icon green" aria-hidden="true">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="cert-tile-shine" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tr" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-bl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-br" aria-hidden="true"></div>
+            <div class="cert-tile-scan" aria-hidden="true"></div>
+            <div class="cert-tile-body">
+              <span class="cert-tile-tag green-tag">CISCO</span>
+              <h3 class="cert-tile-title">Networking<br>Essentials</h3>
+              <p class="cert-tile-issuer">Cisco NetAcad · 2023</p>
+            </div>
+            <div class="cert-tile-btn" aria-hidden="true">
+              <i class="fa-solid fa-expand"></i> VIEW
+            </div>
+          </div>
+        </button>
+
+        <!-- Certificate 3 -->
+        <button
+          class="cert-tile reveal"
+          id="cert-tile-3"
+          role="listitem"
+          aria-label="Open certificate: Google IT Support Professional"
+          data-cert-id="3"
+          data-cert-title="Google IT Support Professional"
+          data-cert-issuer="Google / Coursera"
+          data-cert-year="2023"
+          data-cert-img="assets/images/certificates/cert-3.png"
+        >
+          <div class="cert-tile-inner">
+            <div class="cert-tile-icon purple" aria-hidden="true">
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div class="cert-tile-shine" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tr" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-bl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-br" aria-hidden="true"></div>
+            <div class="cert-tile-scan" aria-hidden="true"></div>
+            <div class="cert-tile-body">
+              <span class="cert-tile-tag purple-tag">GOOGLE</span>
+              <h3 class="cert-tile-title">IT Support<br>Professional</h3>
+              <p class="cert-tile-issuer">Google / Coursera · 2023</p>
+            </div>
+            <div class="cert-tile-btn" aria-hidden="true">
+              <i class="fa-solid fa-expand"></i> VIEW
+            </div>
+          </div>
+        </button>
+
+        <!-- Certificate 4 -->
+        <button
+          class="cert-tile reveal"
+          id="cert-tile-4"
+          role="listitem"
+          aria-label="Open certificate: Python for Everybody"
+          data-cert-id="4"
+          data-cert-title="Python for Everybody"
+          data-cert-issuer="University of Michigan / Coursera"
+          data-cert-year="2022"
+          data-cert-img="assets/images/certificates/cert-4.png"
+        >
+          <div class="cert-tile-inner">
+            <div class="cert-tile-icon ai" aria-hidden="true">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="cert-tile-shine" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tr" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-bl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-br" aria-hidden="true"></div>
+            <div class="cert-tile-scan" aria-hidden="true"></div>
+            <div class="cert-tile-body">
+              <span class="cert-tile-tag ai-cert-tag">PYTHON</span>
+              <h3 class="cert-tile-title">Python for<br>Everybody</h3>
+              <p class="cert-tile-issuer">U of Michigan · 2022</p>
+            </div>
+            <div class="cert-tile-btn" aria-hidden="true">
+              <i class="fa-solid fa-expand"></i> VIEW
+            </div>
+          </div>
+        </button>
+
+        <!-- Certificate 5 -->
+        <button
+          class="cert-tile reveal"
+          id="cert-tile-5"
+          role="listitem"
+          aria-label="Open certificate: Meralco EnergAIze Hackathon 2024"
+          data-cert-id="5"
+          data-cert-title="Meralco EnergAIze Hackathon 2024"
+          data-cert-issuer="Meralco / Manila Electric Company"
+          data-cert-year="2024"
+          data-cert-img="assets/images/certificates/Meralco_Cert.png"
+        >
+          <div class="cert-tile-inner">
+            <div class="cert-tile-icon" style="background:rgba(255,200,0,0.1);color:#ffd600;" aria-hidden="true">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="cert-tile-shine" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tr" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-bl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-br" aria-hidden="true"></div>
+            <div class="cert-tile-scan" aria-hidden="true"></div>
+            <div class="cert-tile-body">
+              <span class="cert-tile-tag" style="border-color:rgba(255,214,0,0.4);color:#ffd600;">HACKATHON</span>
+              <h3 class="cert-tile-title">EnergAIze<br>Hackathon 2024</h3>
+              <p class="cert-tile-issuer">Meralco · 2024</p>
+            </div>
+            <div class="cert-tile-btn" aria-hidden="true">
+              <i class="fa-solid fa-expand"></i> VIEW
+            </div>
+          </div>
+        </button>
+
+        <!-- Certificate 6 -->
+        <button
+          class="cert-tile reveal"
+          id="cert-tile-6"
+          role="listitem"
+          aria-label="Open certificate: JRU Academic Excellence Award"
+          data-cert-id="6"
+          data-cert-title="JRU Academic Excellence Award"
+          data-cert-issuer="Jose Rizal University"
+          data-cert-year="2025"
+          data-cert-img="assets/images/certificates/cert-6.png"
+        >
+          <div class="cert-tile-inner">
+            <div class="cert-tile-icon" style="background:rgba(0,255,136,0.1);color:var(--accent2);" aria-hidden="true">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="cert-tile-shine" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-tr" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-bl" aria-hidden="true"></div>
+            <div class="cert-tile-corner cert-corner-br" aria-hidden="true"></div>
+            <div class="cert-tile-scan" aria-hidden="true"></div>
+            <div class="cert-tile-body">
+              <span class="cert-tile-tag green-tag">JRU</span>
+              <h3 class="cert-tile-title">Academic<br>Excellence Award</h3>
+              <p class="cert-tile-issuer">Jose Rizal University · 2025</p>
+            </div>
+            <div class="cert-tile-btn" aria-hidden="true">
+              <i class="fa-solid fa-expand"></i> VIEW
+            </div>
+          </div>
+        </button>
+
+      </div><!-- /cert-grid -->
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section" aria-label="Contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">// LET'S CONNECT</p>
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info -->
+        <div class="contact-info reveal-left">
+          <h3>Let's Work Together</h3>
+          <p>
+            Whether you have an exciting project, a job opportunity, or simply want
+            to connect and talk tech — I'm always open. Fill out the form or reach
+            me directly through the channels below.
+          </p>
+
+          <ul class="contact-list" role="list">
+            <li class="contact-item">
+              <div class="contact-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <p class="contact-item-label">EMAIL</p>
+                <p class="contact-item-value">jezreeldeniel@gmail.com</p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <p class="contact-item-label">PHONE</p>
+                <p class="contact-item-value">+63 939 929 0441</p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <p class="contact-item-label">LOCATION</p>
+                <p class="contact-item-value">Philippines 🇵🇭</p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-wrap" aria-hidden="true">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div>
+                <p class="contact-item-label">LINKEDIN</p>
+                <p class="contact-item-value">
+                  linkedin.com/in/jezreeldenielmdavid/</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Form -->
+        <div class="reveal">
+          <form class="contact-form glass-card" id="contact-form" style="padding:36px;" novalidate>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">YOUR NAME</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Jezreel Deniel David"
+                  required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">EMAIL ADDRESS</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. jezreeldeniel@gmail.com"
+                  required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">SUBJECT</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="What's this about?"
+                required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">MESSAGE</label>
+              <textarea id="contact-message" name="message" class="form-input"
+                placeholder="Tell me more about your project, idea, or question…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="contact-submit"
+              style="width:100%;justify-content:center;margin-top:4px;">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              SEND MESSAGE
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-logo" aria-label="Jezreel David E-Portfolio">JEZREEL.DEV</div>
+    <p class="footer-copy">
+      &copy; <span id="footer-year"></span> Jezreel David &nbsp;·&nbsp;
+      BSIT Graduate &nbsp;·&nbsp; Jose Rizal University
+    </p>
+    <div class="footer-socials" role="list" aria-label="Social media links">
+      <a href="https://github.com/JezreelDavid-BucDevGin" class="social-link" id="social-github" role="listitem" aria-label="GitHub profile">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jezreeldenielmdavid/" class="social-link" id="social-linkedin" role="listitem" aria-label="LinkedIn profile">
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="social-link" id="social-fb" role="listitem" aria-label="Facebook profile">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="social-link" id="social-email" role="listitem" aria-label="Send email">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Footer year auto-update -->
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+  <!-- ══════════════════════════════════════════════════════════
+       CV / RESUME HOLOGRAPHIC MODAL
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="cv-modal" class="cv-modal-overlay" role="dialog" aria-modal="true" aria-label="Resume Preview" hidden>
+    <!-- Scanline / atmospheric layers -->
+    <div class="cv-modal-scanlines" aria-hidden="true"></div>
+    <div class="cv-modal-beam" aria-hidden="true"></div>
+
+    <div class="cv-modal-container">
+      <!-- Corner decorations -->
+      <span class="cv-corner cv-corner-tl" aria-hidden="true"></span>
+      <span class="cv-corner cv-corner-tr" aria-hidden="true"></span>
+      <span class="cv-corner cv-corner-bl" aria-hidden="true"></span>
+      <span class="cv-corner cv-corner-br" aria-hidden="true"></span>
+
+      <!-- Animated border segments -->
+      <span class="cv-border-top"    aria-hidden="true"></span>
+      <span class="cv-border-bottom" aria-hidden="true"></span>
+      <span class="cv-border-left"   aria-hidden="true"></span>
+      <span class="cv-border-right"  aria-hidden="true"></span>
+
+      <!-- Header bar -->
+      <div class="cv-modal-header">
+        <div class="cv-modal-title-wrap">
+          <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+          <span class="cv-modal-title">CURRICULUM VITAE</span>
+          <span class="cv-modal-subtitle">// JEZREEL DENIEL M. DAVID</span>
+        </div>
+        <button class="cv-modal-close" id="cv-modal-close" aria-label="Close resume modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- Resume image -->
+      <div class="cv-modal-body">
+        <div class="cv-resume-frame">
+          <img
+            src="assets/images/resume/Jezreel Deniel M. David.png"
+            alt="Resume of Jezreel Deniel M. David"
+            id="cv-resume-img"
+            loading="lazy"
+          />
+          <!-- Holographic overlay shimmer -->
+          <div class="cv-resume-shimmer" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Footer bar -->
+      <div class="cv-modal-footer">
+        <span class="cv-modal-status">
+          <span class="cv-status-dot" aria-hidden="true"></span>
+          VERIFIED · BSIT GRADUATE · JRU 2025
+        </span>
+        <a
+          href="assets/images/resume/Jezreel Deniel M. David.pdf"
+          download="Jezreel_Deniel_M_David_CV.pdf"
+          class="btn btn-primary cv-download-btn"
+          id="cv-download-btn"
+          aria-label="Download PDF version of resume"
+        >
+          <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+          DOWNLOAD CV
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       CERTIFICATE PARTICLE MODAL
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="cert-modal" class="cert-modal-overlay" role="dialog" aria-modal="true" aria-label="Certificate Preview" hidden>
+    <!-- Atmospheric layers -->
+    <div class="cert-modal-scanlines" aria-hidden="true"></div>
+
+    <div class="cert-modal-container">
+      <!-- Corner decorations -->
+      <span class="cert-modal-corner cert-modal-corner-tl" aria-hidden="true"></span>
+      <span class="cert-modal-corner cert-modal-corner-tr" aria-hidden="true"></span>
+      <span class="cert-modal-corner cert-modal-corner-bl" aria-hidden="true"></span>
+      <span class="cert-modal-corner cert-modal-corner-br" aria-hidden="true"></span>
+
+      <!-- Border segments -->
+      <span class="cert-modal-border-top"    aria-hidden="true"></span>
+      <span class="cert-modal-border-bottom" aria-hidden="true"></span>
+      <span class="cert-modal-border-left"   aria-hidden="true"></span>
+      <span class="cert-modal-border-right"  aria-hidden="true"></span>
+
+      <!-- Header -->
+      <div class="cert-modal-header">
+        <div class="cert-modal-title-wrap">
+          <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+          <span class="cert-modal-title" id="cert-modal-title">CERTIFICATE</span>
+          <span class="cert-modal-subtitle" id="cert-modal-issuer"></span>
+        </div>
+        <button class="cert-modal-close" id="cert-modal-close" aria-label="Close certificate modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- Canvas for particle assembly + final image -->
+      <div class="cert-modal-body">
+        <div class="cert-modal-frame" id="cert-modal-frame">
+          <canvas id="cert-particle-canvas" aria-hidden="true"></canvas>
+          <img id="cert-modal-img" src="" alt="Certificate" loading="lazy" />
+          <div class="cert-modal-shimmer" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="cert-modal-footer">
+        <span class="cert-modal-status">
+          <span class="cert-status-dot" aria-hidden="true"></span>
+          <span id="cert-modal-year"></span>
+        </span>
+        <a
+          id="cert-download-btn"
+          href="#"
+          download
+          class="btn btn-primary cert-dl-btn"
+          aria-label="Download certificate"
+        >
+          <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+          DOWNLOAD
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnergAIze Hackathon 2024 – Project Case Study | Jezreel David</title>
+    <meta
+      name="description"
+      content="AI-powered energy optimization system developed for Meralco's EnergAIze 2024 hackathon competition using machine learning and predictive analytics."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/project-detail.css" />
+    <style>
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(5, 10, 20, 0.95);
+        backdrop-filter: blur(20px);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .lightbox-image {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        box-shadow: 0 0 60px rgba(0, 212, 255, 0.4);
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: var(--primary);
+        font-size: 40px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .lightbox-close:hover {
+        text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+        transform: rotate(90deg);
+      }
+
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      [data-reveal].visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="header-logo">
+        <i class="fa-solid fa-arrow-left"></i> JEZREEL.DEV
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html#projects">PROJECTS</a>
+        <a href="../index.html#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <section class="project-hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-video-wrap image-corners">
+          <img
+            src="../assets/images/projects/EnergAIze.png"
+            alt="EnergAIze Demo"
+          />
+          <div class="play-button">
+            <div class="play-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <video style="display: none" controls muted>
+            <source src="path-to-your-demo-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="hero-text">
+          <span class="project-tag">HACKATHON WINNER</span>
+          <h1 class="hero-title">
+            EnergAIze: <span>AI Energy Optimization</span>
+          </h1>
+          <p class="hero-subtitle">
+            An advanced AI-powered energy optimization system developed for
+            Meralco's EnergAIze 2024 competition. Uses machine learning and
+            predictive analytics to optimize energy consumption and reduce
+            utility costs.
+          </p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary" target="_blank">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo
+            </a>
+            <a
+              href="https://github.com"
+              class="btn btn-outline"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-content">
+      <section class="info-grid" data-reveal>
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <p class="info-label">Competition</p>
+          <p class="info-value">Meralco EnergAIze 2024</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <p class="info-label">Duration</p>
+          <p class="info-value">48-Hour Hackathon</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <p class="info-label">Team Size</p>
+          <p class="info-value">4 Members</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <p class="info-label">Technology Stack</p>
+          <ul class="info-list">
+            <li class="info-badge">Python</li>
+            <li class="info-badge">scikit-learn</li>
+            <li class="info-badge">BERT</li>
+            <li class="info-badge">HTML/CSS/JS</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="case-study-section" data-reveal>
+        <div class="section-header">
+          <p class="section-tag">// CHALLENGE</p>
+          <h2 class="section-title">The Problem & <span>Goal</span></h2>
+        </div>
+
+        <div class="problem-section">
+          <h3><i class="fa-solid fa-lightbulb"></i> Problem Statement</h3>
+          <p>
+            Energy consumption is a major concern for businesses and households.
+            Traditional approaches lack real-time insights and predictive
+            capabilities. Companies need intelligent systems to optimize energy
+            usage, reduce waste, and lower costs while supporting sustainability
+            goals.
+          </p>
+        </div>
+
+        <div
+          class="problem-section"
+          style="border-color: rgba(0, 255, 136, 0.2)"
+        >
+          <h3 style="color: var(--accent2)">
+            <i class="fa-solid fa-target"></i> Our Goal
+          </h3>
+          <p>
+            Develop an AI-powered platform that analyzes energy consumption
+            patterns, predicts future usage, and provides actionable
+            recommendations for optimization within a 48-hour hackathon
+            timeframe.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-study-section" data-reveal>
+        <div class="section-header">
+          <p class="section-tag">// METHODOLOGY</p>
+          <h2 class="section-title">Development <span>Process</span></h2>
+        </div>
+
+        <div class="process-timeline">
+          <div class="timeline-step">
+            <div class="step-number">01</div>
+            <h4 class="step-title">Problem Understanding</h4>
+            <p class="step-desc">
+              Rapid analysis of Meralco's energy data format and requirements
+              within the first 6 hours.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">02</div>
+            <h4 class="step-title">Data Pipeline</h4>
+            <p class="step-desc">
+              Built data ingestion and preprocessing pipeline to handle
+              real-world energy consumption datasets.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">03</div>
+            <h4 class="step-title">ML Models Development</h4>
+            <p class="step-desc">
+              Trained multiple predictive models including time-series
+              forecasting and anomaly detection.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">04</div>
+            <h4 class="step-title">Optimization Algorithm</h4>
+            <p class="step-desc">
+              Implemented AI-driven recommendations engine for energy
+              optimization strategies.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">05</div>
+            <h4 class="step-title">Frontend Dashboard</h4>
+            <p class="step-desc">
+              Created intuitive web interface showcasing analytics, predictions,
+              and recommendations.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">06</div>
+            <h4 class="step-title">Presentation</h4>
+            <p class="step-desc">
+              Delivered compelling demo and presentation to competition judges.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" data-reveal>
+        <div class="section-header">
+          <p class="section-tag">// OUTCOMES</p>
+          <h2 class="section-title">Solution & <span>Results</span></h2>
+        </div>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-metric">🏆</div>
+            <div class="result-label">Competition Placement</div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.85rem;
+                margin-top: 8px;
+              "
+            >
+              Top ranking in hackathon
+            </p>
+          </div>
+
+          <div class="result-card">
+            <div class="result-metric">35%</div>
+            <div class="result-label">Potential Savings</div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.85rem;
+                margin-top: 8px;
+              "
+            >
+              Energy cost reduction estimate
+            </p>
+          </div>
+
+          <div class="result-card">
+            <div class="result-metric">92%</div>
+            <div class="result-label">Prediction Accuracy</div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.85rem;
+                margin-top: 8px;
+              "
+            >
+              Energy usage forecasting
+            </p>
+          </div>
+
+          <div class="result-card">
+            <div class="result-metric">48h</div>
+            <div class="result-label">Development Time</div>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.85rem;
+                margin-top: 8px;
+              "
+            >
+              Complete solution in hackathon
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" data-reveal>
+        <div class="section-header">
+          <p class="section-tag">// VISUAL</p>
+          <h2 class="section-title">Project <span>Showcase</span></h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="../assets/images/projects/EnergAIze.png"
+              alt="Energy Dashboard"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../assets/images/projects/EnergAIze.png"
+              alt="Predictive Charts"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../assets/images/projects/EnergAIze.png"
+              alt="Recommendations"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" data-reveal>
+        <div class="section-header">
+          <p class="section-tag">// FEATURES</p>
+          <h2 class="section-title">Platform <span>Capabilities</span></h2>
+        </div>
+
+        <div class="process-timeline">
+          <div class="timeline-step">
+            <h4 class="step-title">Energy Analytics</h4>
+            <p class="step-desc">
+              Real-time and historical energy consumption analysis with detailed
+              breakdowns by source.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <h4 class="step-title">Predictive Forecasting</h4>
+            <p class="step-desc">
+              ML-powered predictions of future energy usage patterns with
+              confidence intervals.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <h4 class="step-title">Smart Recommendations</h4>
+            <p class="step-desc">
+              AI-driven actionable insights for energy optimization and cost
+              reduction strategies.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <h4 class="step-title">Anomaly Detection</h4>
+            <p class="step-desc">
+              Intelligent system to identify unusual consumption patterns and
+              potential issues.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reflection-section" data-reveal>
+        <h3><i class="fa-solid fa-brain"></i> Key Learnings & Challenges</h3>
+
+        <div class="reflection-content">
+          <div class="reflection-item">
+            <p class="reflection-title">Challenge: Time Pressure</p>
+            <p class="reflection-text">
+              48-hour constraint required rapid decision-making, efficient team
+              coordination, and prioritizing core features over perfection.
+            </p>
+          </div>
+
+          <div class="reflection-item">
+            <p class="reflection-title">Learning: Agile Teamwork</p>
+            <p class="reflection-text">
+              Clear communication and role division among team members were
+              crucial for delivering a complete solution under tight time
+              constraints.
+            </p>
+          </div>
+
+          <div class="reflection-item">
+            <p class="reflection-title">Challenge: Real-World Data</p>
+            <p class="reflection-text">
+              Working with actual Meralco energy data revealed the importance of
+              robust data handling and validation in real-world ML applications.
+            </p>
+          </div>
+
+          <div class="reflection-item">
+            <p class="reflection-title">Learning: MVP Thinking</p>
+            <p class="reflection-text">
+              Learned the value of building minimum viable products quickly and
+              iterating, rather than trying to achieve perfection upfront.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section" data-reveal>
+        <div class="section-header">
+          <p class="section-tag">// FEEDBACK</p>
+          <h2 class="section-title">Hackathon <span>Feedback</span></h2>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Excellent execution of a complex solution in just 48 hours. The
+            team demonstrated strong technical skills and creative
+            problem-solving."
+          </p>
+          <p class="testimonial-author">
+            <i class="fa-solid fa-star"></i> Hackathon Judge Panel, Meralco
+            EnergAIze 2024
+          </p>
+        </div>
+      </section>
+
+      <section class="project-links" data-reveal>
+        <a href="#" class="project-link" target="_blank">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Platform
+        </a>
+        <a href="https://github.com" class="project-link" target="_blank">
+          <i class="fa-brands fa-github"></i> Source Code
+        </a>
+        <a href="#" class="project-link" target="_blank">
+          <i class="fa-solid fa-file-pdf"></i> Hackathon Submission
+        </a>
+      </section>
+    </div>
+
+    <footer>
+      <p class="footer-text">&copy; 2024 Jezreel David. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="../index.html#projects" class="footer-link"
+          >Back to Projects</a
+        >
+        <a href="../index.html#contact" class="footer-link">Get in Touch</a>
+      </div>
+    </footer>
+
+    <script src="../assets/js/project-detail.js"></script>
+  </body>
+</html>
