@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,6 +35,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/robots.css" />
 
   <!-- Cursor glow style  (critical, tiny) -->
   <style>
@@ -87,11 +88,12 @@
     </a>
 
     <ul class="nav-links" id="nav-links" role="list">
-      <li><a href="#about" id="nav-about">ABOUT</a></li>
-      <li><a href="#skills" id="nav-skills">SKILLS</a></li>
-      <li><a href="#projects" id="nav-projects">PROJECTS</a></li>
-      <li><a href="#certificates" id="nav-certificates">CERTS</a></li>
-      <li><a href="#contact" id="nav-contact" class="nav-cta">CONTACT</a></li>
+      <li><a href="#about" id="nav-about"><i class="fa-solid fa-user-astronaut nav-link-icon" aria-hidden="true"></i>ABOUT</a></li>
+      <li><a href="#experience" id="nav-experience"><i class="fa-solid fa-briefcase nav-link-icon" aria-hidden="true"></i>EXPERIENCE</a></li>
+      <li><a href="#skills" id="nav-skills"><i class="fa-solid fa-laptop-code nav-link-icon" aria-hidden="true"></i>SKILLS</a></li>
+      <li><a href="#projects" id="nav-projects"><i class="fa-solid fa-diagram-project nav-link-icon" aria-hidden="true"></i>PROJECTS</a></li>
+      <li><a href="#certificates" id="nav-certificates"><i class="fa-solid fa-award nav-link-icon" aria-hidden="true"></i>CERTS</a></li>
+      <li><a href="#contact" id="nav-contact" class="nav-cta"><i class="fa-solid fa-paper-plane nav-link-icon" aria-hidden="true"></i>CONTACT</a></li>
     </ul>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
@@ -220,7 +222,7 @@
           <p class="about-desc">
             I am a dedicated and enthusiastic IT graduate driven by the desire to build
             technology that makes a real difference. Throughout my academic journey at
-            <strong style="color:var(--text-primary)">Jose Rizal University</strong>, I have
+            <strong class="text-primary-strong">Jose Rizal University</strong>, I have
             developed a strong foundation in software development, networking, database management,
             and modern web technologies. I believe in continuous learning and enjoy tackling
             challenging problems with creative, efficient solutions.
@@ -241,8 +243,8 @@
             </div>
             <div class="about-info-item">
               <span class="about-info-label">STATUS</span>
-              <span class="about-info-value" style="color:var(--accent2)">
-                <i class="fa-solid fa-circle" style="font-size:0.6rem;margin-right:5px"></i>
+              <span class="about-info-value about-status-online">
+                <i class="fa-solid fa-circle about-status-dot"></i>
                 Graduate
               </span>
             </div>
@@ -260,7 +262,7 @@
           <div class="education-block">
             <span class="edu-badge">2021 – 2025</span>
             <p class="edu-degree">
-              <i class="fa-solid fa-graduation-cap" style="color:var(--primary);margin-right:8px"
+              <i class="fa-solid fa-graduation-cap edu-degree-icon"
                 aria-hidden="true"></i>
               Bachelor of Science in Information Technology
             </p>
@@ -276,7 +278,7 @@
             </p>
           </div>
 
-          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <div class="about-actions-wrap">
             <a href="#contact" class="btn btn-primary" id="about-hire-btn">
               <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
               HIRE ME
@@ -287,6 +289,138 @@
             </button>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       EXPERIENCE SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="experience" class="section" aria-label="Professional experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">// PROFESSIONAL JOURNEY</p>
+        <h2 class="section-title">Experience &amp; <span>Internship</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="experience-timeline">
+        <!-- Experience Card 1 -->
+        <article class="exp-card glass-card reveal-left" aria-label="D.B. International Sales & Services, Inc. internship">
+          <div class="exp-card-header">
+            <div class="exp-timeline-dot" aria-hidden="true"></div>
+            <div class="exp-header-content">
+              <div class="exp-company">
+                <i class="fa-solid fa-building" aria-hidden="true"></i>
+                D.B. International Sales &amp; Services, Inc.
+              </div>
+              <h3 class="exp-role">Full-Stack Developer &amp; Technical Support <span class="exp-role-type">Intern</span></h3>
+              <div class="exp-period">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                2025 | March - July
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card-body">
+            <!-- Key Contribution -->
+            <div class="exp-highlight" aria-hidden="true">
+              <span class="highlight-label">KEY PROJECT</span>
+              <p>Project Management System</p>
+            </div>
+
+            <!-- Main Contribution -->
+            <div class="exp-contribution">
+              <p class="exp-subtitle">Assisted in developing a dedicated <strong>Project Management System</strong> under the guidance of:</p>
+              <div class="exp-supervisors">
+                <div class="supervisor-item">
+                  <span class="supervisor-title">Senior Developer</span>
+                  <span class="supervisor-name">Sir Leo</span>
+                </div>
+                <div class="supervisor-item">
+                  <span class="supervisor-title">Junior Developer</span>
+                  <span class="supervisor-name">Sir Ronald</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Responsibilities List -->
+            <div class="exp-responsibilities">
+              <p class="exp-responsibilities-label">Key Responsibilities &amp; Contributions:</p>
+              <ul class="exp-list" role="list">
+                <li role="listitem">
+                  <span class="exp-list-icon" aria-hidden="true"></span>
+                  <span class="exp-list-content">
+                    <strong>Kanban Board Feature Development</strong> – Designed and implemented core kanban board functionality for task organization and workflow management
+                  </span>
+                </li>
+                <li role="listitem">
+                  <span class="exp-list-icon" aria-hidden="true"></span>
+                  <span class="exp-list-content">
+                    <strong>Drag-and-Drop Integration</strong> – Integrated intuitive drag-and-drop functionality for seamless task management and project visualization
+                  </span>
+                </li>
+                <li role="listitem">
+                  <span class="exp-list-icon" aria-hidden="true"></span>
+                  <span class="exp-list-content">
+                    <strong>Customizable UI Themes</strong> – Added customizable theme system to enhance user personalization and improve interface experience
+                  </span>
+                </li>
+                <li role="listitem">
+                  <span class="exp-list-icon" aria-hidden="true"></span>
+                  <span class="exp-list-content">
+                    <strong>Technical Support</strong> – Provided technical support and troubleshooting assistance for internal systems and user-facing applications
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="exp-tech-stack">
+              <p class="exp-tech-label">Tech Stack:</p>
+              <div class="exp-tech-badges" role="list" aria-label="Technologies used">
+                <span class="tech-badge exp-badge-blue" role="listitem">
+                  <i class="fa-brands fa-laravel" aria-hidden="true"></i> Laravel
+                </span>
+                <span class="tech-badge exp-badge-blue" role="listitem">
+                  <i class="fa-brands fa-vuejs" aria-hidden="true"></i> Vue.js
+                </span>
+                <span class="tech-badge exp-badge-green" role="listitem">
+                  <i class="fa-brands fa-css3-alt" aria-hidden="true"></i> Tailwind CSS
+                </span>
+                <span class="tech-badge exp-badge-purple" role="listitem">
+                  <i class="fa-solid fa-grip" aria-hidden="true"></i> Kanban System
+                </span>
+                <span class="tech-badge exp-badge-purple" role="listitem">
+                  <i class="fa-solid fa-mouse" aria-hidden="true"></i> Drag &amp; Drop UI
+                </span>
+                <span class="tech-badge exp-badge-blue" role="listitem">
+                  <i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript
+                </span>
+              </div>
+            </div>
+
+            <!-- Confidentiality Notice -->
+            <div class="exp-confidentiality" aria-label="Confidentiality notice">
+              <div class="conf-content">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                <div>
+                  <p class="conf-title">Confidentiality Notice</p>
+                  <p class="conf-text">
+                    Due to company confidentiality and restrictions from my supervisors, I am unable to publicly showcase the actual system or provide a digital copy of the project, as it is exclusively designated for <strong>internal company use</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glow effect -->
+          <div class="exp-card-glow" aria-hidden="true"></div>
+        </article>
       </div>
     </div>
   </section>
@@ -656,7 +790,7 @@
 
           <div class="proj-strip-line" aria-hidden="true"></div>
 
-          <button class="proj-nav-btn proj-nav-up" id="proj-nav-up" aria-label="Previous project">
+          <button class="proj-nav-btn proj-nav-up" id="proj-nav-up" aria-label="Previous project" hidden>
             <i class="fa-solid fa-chevron-up"></i>
           </button>
 
@@ -700,7 +834,7 @@
               </div>
 
               <div class="proj-thumb" data-index="4" role="option" aria-selected="false" tabindex="-1" id="proj-thumb-4">
-                <div class="proj-thumb-img"><img src="assets/images/project-3.png" alt="" loading="lazy" /></div>
+                <div class="proj-thumb-img"><img src="assets/images/project-2.png" alt="" loading="lazy" /></div>
                 <div class="proj-thumb-info">
                   <span class="proj-thumb-num">05</span>
                   <span class="proj-thumb-name">LangChain Chatbot</span>
@@ -746,7 +880,7 @@
                 <span class="project-tech" role="listitem">Hostinger</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/JezreelDavid-BucDevGin/PASIGNAE-Web_Portal_TheBinary101.git" class="project-link" id="proj1-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://github.com/JezreelDavid-BucDevGin/PASIGNAE-Web_Portal_TheBinary101.git" class="project-link" id="proj1-github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
                 <a href="projects/pasignae-web-portal.html" class="project-link" id="proj1-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
               </div>
             </div>
@@ -772,7 +906,7 @@
                 <span class="project-tech" role="listitem">MariaDB</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com" class="project-link" id="proj2-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://github.com" class="project-link" id="proj2-github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
                 <a href="projects/project-management-system.html" class="project-link" id="proj2-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
               </div>
             </div>
@@ -796,9 +930,10 @@
                 <span class="project-tech" role="listitem">HuggingFace</span>
                 <span class="project-tech" role="listitem">Pandas</span>
                 <span class="project-tech" role="listitem">Matplotlib</span>
+                <span class="project-tech" role="listitem">Colab</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/JezreelDavid-BucDevGin/COLLEGE_EXIT_FORM_DETECTION-JRU_Guidance-TripleKill.git" class="project-link" id="proj3a-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://github.com/JezreelDavid-BucDevGin/COLLEGE_EXIT_FORM_DETECTION-JRU_Guidance-TripleKill.git" class="project-link" id="proj3a-github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
                 <a href="projects/sentiment-analysis.html" class="project-link" id="proj3a-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
               </div>
             </div>
@@ -825,7 +960,7 @@
                 <span class="project-tech" role="listitem">BERT</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/JezreelDavid-BucDevGin/EnergAIze-Meralco_Hackathon_Innovecom.git" class="project-link" id="proj4-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://github.com/JezreelDavid-BucDevGin/EnergAIze-Meralco_Hackathon_Innovecom.git" class="project-link" id="proj4-github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
                 <a href="projects/energaize-hackathon.html" class="project-link" id="proj4-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
               </div>
             </div>
@@ -834,7 +969,7 @@
           <!-- Project 5 -->
           <article class="project-card glass-card proj-display-card" data-proj-index="4" aria-label="Project: Chatbot Development Using LangChain">
             <div class="project-img">
-              <img src="assets/images/project-3.png" alt="LangChain Chatbot" id="project5-img" loading="lazy" />
+              <img src="assets/images/project-2.png" alt="LangChain Chatbot" id="project5-img" loading="lazy" />
               <div class="project-img-overlay">
                 <span class="project-tag">LLM</span>
                 <span class="project-tag">CHATBOT</span>
@@ -849,9 +984,10 @@
                 <span class="project-tech" role="listitem">GPT-2</span>
                 <span class="project-tech" role="listitem">GPT-Neo</span>
                 <span class="project-tech" role="listitem">T5-small</span>
+                <span class="project-tech" role="listitem">Colab</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/JezreelDavid-BucDevGin/ChatBot-langchain-Jezreel_David.git" class="project-link" id="proj5-github" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="https://github.com/JezreelDavid-BucDevGin/ChatBot-langchain-Jezreel_David.git" class="project-link" id="proj5-github" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
                 <a href="projects/langchain-chatbot.html" class="project-link" id="proj5-demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read More</a>
               </div>
             </div>
@@ -1023,7 +1159,7 @@
           data-cert-img="assets/images/certificates/Meralco_Cert.png"
         >
           <div class="cert-tile-inner">
-            <div class="cert-tile-icon" style="background:rgba(255,200,0,0.1);color:#ffd600;" aria-hidden="true">
+            <div class="cert-tile-icon cert-tile-icon-gold" aria-hidden="true">
               <i class="fa-solid fa-bolt"></i>
             </div>
             <div class="cert-tile-shine" aria-hidden="true"></div>
@@ -1033,7 +1169,7 @@
             <div class="cert-tile-corner cert-corner-br" aria-hidden="true"></div>
             <div class="cert-tile-scan" aria-hidden="true"></div>
             <div class="cert-tile-body">
-              <span class="cert-tile-tag" style="border-color:rgba(255,214,0,0.4);color:#ffd600;">HACKATHON</span>
+              <span class="cert-tile-tag cert-tile-tag-gold">HACKATHON</span>
               <h3 class="cert-tile-title">EnergAIze<br>Hackathon 2024</h3>
               <p class="cert-tile-issuer">Meralco · 2024</p>
             </div>
@@ -1056,7 +1192,7 @@
           data-cert-img="assets/images/certificates/cert-6.png"
         >
           <div class="cert-tile-inner">
-            <div class="cert-tile-icon" style="background:rgba(0,255,136,0.1);color:var(--accent2);" aria-hidden="true">
+            <div class="cert-tile-icon cert-tile-icon-green" aria-hidden="true">
               <i class="fa-solid fa-graduation-cap"></i>
             </div>
             <div class="cert-tile-shine" aria-hidden="true"></div>
@@ -1147,8 +1283,8 @@
 
         <!-- Form -->
         <div class="reveal">
-          <form class="contact-form glass-card" id="contact-form" style="padding:36px;" novalidate>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+          <form class="contact-form glass-card contact-form-shell" id="contact-form" novalidate>
+            <div class="contact-form-grid">
               <div class="form-group">
                 <label class="form-label" for="contact-name">YOUR NAME</label>
                 <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Jezreel Deniel David"
@@ -1170,8 +1306,7 @@
               <textarea id="contact-message" name="message" class="form-input"
                 placeholder="Tell me more about your project, idea, or question…" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" id="contact-submit"
-              style="width:100%;justify-content:center;margin-top:4px;">
+            <button type="submit" class="btn btn-primary contact-submit-btn" id="contact-submit">
               <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
               SEND MESSAGE
             </button>
@@ -1195,13 +1330,16 @@
       <a href="https://github.com/JezreelDavid-BucDevGin" class="social-link" id="social-github" role="listitem" aria-label="GitHub profile">
         <i class="fa-brands fa-github" aria-hidden="true"></i>
       </a>
+      <a href="https://gitlab.com/jezreeldenield" class="social-link" id="social-gitlab" role="listitem" aria-label="GitLab profile">
+        <i class="fa-brands fa-gitlab" aria-hidden="true"></i>
+      </a>
       <a href="https://www.linkedin.com/in/jezreeldenielmdavid/" class="social-link" id="social-linkedin" role="listitem" aria-label="LinkedIn profile">
         <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
       </a>
-      <a href="#" class="social-link" id="social-fb" role="listitem" aria-label="Facebook profile">
-        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      <a href="https://huggingface.co/BucDevGin" class="social-link" id="social-huggingface" role="listitem" aria-label="Hugging Face profile">
+        <i class="fa-solid fa-robot" aria-hidden="true"></i>
       </a>
-      <a href="#" class="social-link" id="social-email" role="listitem" aria-label="Send email">
+      <a href="mailto:jezreeldeniel@gmail.com" class="social-link" id="social-email" role="listitem" aria-label="Send email">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
       </a>
     </div>
