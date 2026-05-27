@@ -1,0 +1,617 @@
+/* ============================================================
+   Animated Pixel-Art Robots – Experience Section
+   5 cute mini robots doing random activities
+   ============================================================ */
+
+/* ─── Robot Base Structure ─────────────────────────────────── */
+.exp-robot {
+  position: absolute;
+  width: 90px;
+  height: 110px;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.3));
+}
+
+.robot-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ─── Robot Head (shared) ──────────────────────────────────── */
+.robot-head {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  background: linear-gradient(180deg, #e8edf2 0%, #c8d0da 100%);
+  border-radius: 50% 50% 40% 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  border: 1.5px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+}
+
+/* Visor / Eyes */
+.robot-head::before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 10px;
+  background: linear-gradient(90deg, #00d4ff, #7b2fff);
+  border-radius: 12px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.6), inset 0 1px 2px rgba(255,255,255,0.3);
+  animation: visor-glow 2s ease-in-out infinite;
+}
+
+/* Antenna */
+.robot-head::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 10px;
+  background: #a0b0c0;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Antenna tip (via robot-body::before) */
+.robot-body::before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--primary, #00d4ff);
+  border-radius: 50%;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px var(--primary, #00d4ff);
+  animation: antenna-blink 1.8s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes visor-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 212, 255, 0.5), inset 0 1px 2px rgba(255,255,255,0.3); }
+  50% { box-shadow: 0 0 16px rgba(0, 212, 255, 0.9), inset 0 1px 2px rgba(255,255,255,0.5); }
+}
+
+@keyframes antenna-blink {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--primary, #00d4ff); }
+  50% { opacity: 0.4; box-shadow: 0 0 3px var(--primary, #00d4ff); }
+}
+
+/* ─── Robot Torso (shared) ─────────────────────────────────── */
+.robot-torso {
+  position: absolute;
+  width: 30px;
+  height: 28px;
+  background: linear-gradient(180deg, #3a4a5c 0%, #2a3544 100%);
+  border-radius: 6px;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Chest light */
+.robot-torso::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--accent2, #00ff88);
+  border-radius: 50%;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px var(--accent2, #00ff88);
+  animation: chest-pulse 2s ease-in-out infinite;
+}
+
+@keyframes chest-pulse {
+  0%, 100% { box-shadow: 0 0 6px var(--accent2, #00ff88); transform: translateX(-50%) scale(1); }
+  50% { box-shadow: 0 0 14px var(--accent2, #00ff88); transform: translateX(-50%) scale(1.15); }
+}
+
+/* ─── Robot Legs (shared) ──────────────────────────────────── */
+.robot-legs {
+  position: absolute;
+  top: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.robot-leg {
+  width: 10px;
+  height: 18px;
+  background: linear-gradient(180deg, #4a5a6c, #3a4a5c);
+  border-radius: 0 0 4px 4px;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+/* Feet */
+.robot-leg::after {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 5px;
+  background: #4a5a6c;
+  border-radius: 2px;
+  margin-top: 0;
+  margin-left: -2px;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+/* ─── Robot Arms (shared base) ─────────────────────────────── */
+.robot-arm {
+  position: absolute;
+  width: 8px;
+  height: 22px;
+  background: linear-gradient(180deg, #4a5a6c, #3a4a5c);
+  border-radius: 4px;
+  top: 30px;
+  transform-origin: top center;
+  border: 1px solid rgba(0, 212, 255, 0.12);
+}
+
+.robot-arm.left { left: 14px; }
+.robot-arm.right { right: 14px; }
+
+/* ─── Robot Labels ─────────────────────────────────────────── */
+.robot-label {
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.robot-label-num {
+  display: block;
+  font-family: var(--font-display, 'Orbitron', monospace);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--primary, #00d4ff);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  line-height: 1;
+}
+
+.robot-label-text {
+  display: block;
+  font-family: var(--font-display, 'Orbitron', monospace);
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--text-muted, #6b8fa8);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.robot-label-desc {
+  display: block;
+  font-family: var(--font-mono, 'Share Tech Mono', monospace);
+  font-size: 0.48rem;
+  color: var(--text-muted, #6b8fa8);
+  opacity: 0.7;
+  margin-top: 1px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ROBOT 01 — WELDING (sparks + arm swing)
+   ═══════════════════════════════════════════════════════════ */
+.robot-welder { animation: robot-float 4s ease-in-out infinite; }
+.robot-welder .robot-arm.right { animation: weld-arm 1.2s ease-in-out infinite; }
+
+/* Welding tool */
+.robot-welder .robot-arm.right::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 12px;
+  background: linear-gradient(180deg, #aaa, #ff8800);
+  border-radius: 1px;
+}
+
+/* Welding sparks container */
+.weld-sparks {
+  position: absolute;
+  right: 6px;
+  top: 52px;
+  width: 20px;
+  height: 20px;
+}
+
+.weld-sparks span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #ffaa00;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #ff8800, 0 0 12px #ff6600;
+}
+
+.weld-sparks span:nth-child(1) { animation: spark1 0.8s ease-out infinite; }
+.weld-sparks span:nth-child(2) { animation: spark2 0.8s ease-out 0.2s infinite; }
+.weld-sparks span:nth-child(3) { animation: spark3 0.8s ease-out 0.4s infinite; }
+
+@keyframes weld-arm {
+  0%, 100% { transform: rotate(-15deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@keyframes spark1 {
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(12px, -15px); opacity: 0; }
+}
+@keyframes spark2 {
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(-8px, -18px); opacity: 0; }
+}
+@keyframes spark3 {
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(15px, -8px); opacity: 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ROBOT 02 — COMPUTING (typing + screen)
+   ═══════════════════════════════════════════════════════════ */
+.robot-computer { animation: robot-float 5s ease-in-out infinite 0.5s; }
+.robot-computer .robot-arm.left { animation: type-left 0.6s ease-in-out infinite; }
+.robot-computer .robot-arm.right { animation: type-right 0.6s ease-in-out infinite 0.3s; }
+
+/* Computer screen */
+.computer-screen {
+  position: absolute;
+  width: 38px;
+  height: 26px;
+  background: rgba(0, 20, 40, 0.9);
+  border: 1.5px solid rgba(0, 212, 255, 0.5);
+  border-radius: 3px;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+  overflow: hidden;
+}
+
+.computer-screen::before {
+  content: '> _';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  font-family: monospace;
+  font-size: 5px;
+  color: var(--accent2, #00ff88);
+  animation: screen-type 1.5s step-end infinite;
+  text-shadow: 0 0 4px var(--accent2, #00ff88);
+}
+
+.computer-screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 212, 255, 0.03) 50%);
+  background-size: 100% 4px;
+  animation: scanline 3s linear infinite;
+}
+
+@keyframes type-left {
+  0%, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(30deg); }
+}
+@keyframes type-right {
+  0%, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(-30deg); }
+}
+@keyframes screen-type {
+  0% { content: '> _'; }
+  25% { content: '> 01_'; }
+  50% { content: '> 0110_'; }
+  75% { content: '> 01101_'; }
+}
+@keyframes scanline {
+  from { transform: translateY(0); }
+  to { transform: translateY(4px); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ROBOT 03 — BUILDING ROCKET
+   ═══════════════════════════════════════════════════════════ */
+.robot-builder { animation: robot-float 4.5s ease-in-out infinite 1s; }
+.robot-builder .robot-arm.left { animation: build-arm-l 2s ease-in-out infinite; }
+.robot-builder .robot-arm.right { animation: build-arm-r 2s ease-in-out infinite 1s; }
+
+/* Mini rocket */
+.mini-rocket {
+  position: absolute;
+  right: -8px;
+  top: -10px;
+  width: 18px;
+  height: 40px;
+}
+
+.mini-rocket-body {
+  width: 14px;
+  height: 28px;
+  background: linear-gradient(180deg, #dde4ec 0%, #a0b8cc 100%);
+  border-radius: 7px 7px 3px 3px;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+/* Rocket nose */
+.mini-rocket-body::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid var(--danger, #ff3d71);
+}
+
+/* Rocket window */
+.mini-rocket-body::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 212, 255, 0.6);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 6px rgba(0, 212, 255, 0.4);
+}
+
+/* Rocket flame */
+.rocket-flame {
+  width: 10px;
+  height: 14px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #ff8800, #ff4400, transparent);
+  border-radius: 0 0 50% 50%;
+  animation: flame-flicker 0.3s ease-in-out infinite alternate;
+  opacity: 0.9;
+}
+
+@keyframes build-arm-l {
+  0%, 100% { transform: rotate(15deg); }
+  50% { transform: rotate(-40deg); }
+}
+@keyframes build-arm-r {
+  0%, 100% { transform: rotate(-15deg); }
+  50% { transform: rotate(40deg); }
+}
+@keyframes flame-flicker {
+  0% { height: 10px; opacity: 0.7; }
+  100% { height: 16px; opacity: 1; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ROBOT 04 — PROGRAMMING (holographic terminal)
+   ═══════════════════════════════════════════════════════════ */
+.robot-programmer { animation: robot-float 3.8s ease-in-out infinite 0.8s; }
+.robot-programmer .robot-arm.left { animation: prog-type-l 0.8s ease-in-out infinite; }
+.robot-programmer .robot-arm.right { animation: prog-type-r 0.8s ease-in-out infinite 0.4s; }
+
+/* Holographic terminal */
+.holo-terminal {
+  position: absolute;
+  width: 44px;
+  height: 30px;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.15), inset 0 0 10px rgba(0, 212, 255, 0.05);
+  overflow: hidden;
+}
+
+/* Code lines */
+.holo-terminal::before {
+  content: '</>';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  font-family: monospace;
+  font-size: 6px;
+  color: var(--primary, #00d4ff);
+  text-shadow: 0 0 4px var(--primary, #00d4ff);
+  animation: code-scroll 2s linear infinite;
+}
+
+.holo-terminal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+  animation: holo-sweep 2.5s linear infinite;
+}
+
+@keyframes prog-type-l {
+  0%, 100% { transform: rotate(25deg); }
+  50% { transform: rotate(35deg); }
+}
+@keyframes prog-type-r {
+  0%, 100% { transform: rotate(-25deg); }
+  50% { transform: rotate(-35deg); }
+}
+@keyframes code-scroll {
+  0% { content: '</>'; }
+  33% { content: 'fn()'; }
+  66% { content: '{..}'; }
+}
+@keyframes holo-sweep {
+  from { left: -100%; }
+  to { left: 200%; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ROBOT 05 — RIDING UFO
+   ═══════════════════════════════════════════════════════════ */
+.robot-ufo-wrap {
+  animation: ufo-float 3s ease-in-out infinite;
+}
+
+/* UFO body */
+.ufo-body {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 20px;
+  background: linear-gradient(180deg, #6078a0 0%, #3a4a60 100%);
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 212, 255, 0.35);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+/* UFO dome */
+.ufo-dome {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 20px;
+  background: linear-gradient(180deg, rgba(0, 212, 255, 0.15), rgba(0, 212, 255, 0.05));
+  border: 1.5px solid rgba(0, 212, 255, 0.4);
+  border-radius: 50% 50% 20% 20%;
+  border-bottom: none;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.15);
+}
+
+/* UFO lights */
+.ufo-lights {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.ufo-lights span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: ufo-light-chase 1.2s ease-in-out infinite;
+}
+
+.ufo-lights span:nth-child(1) { background: #00d4ff; animation-delay: 0s; }
+.ufo-lights span:nth-child(2) { background: #7b2fff; animation-delay: 0.2s; }
+.ufo-lights span:nth-child(3) { background: #00ff88; animation-delay: 0.4s; }
+.ufo-lights span:nth-child(4) { background: #ff3d71; animation-delay: 0.6s; }
+.ufo-lights span:nth-child(5) { background: #00d4ff; animation-delay: 0.8s; }
+
+/* UFO beam */
+.ufo-beam {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(180deg, rgba(0, 212, 255, 0.15), transparent);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  animation: beam-pulse 2s ease-in-out infinite;
+}
+
+@keyframes ufo-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+@keyframes ufo-light-chase {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.3); box-shadow: 0 0 8px currentColor; }
+}
+@keyframes beam-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+/* ─── Shared Float Animation ──────────────────────────────── */
+@keyframes robot-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ─── Experience Section Robot Layout ─────────────────────── */
+.exp-robots-container {
+  position: relative;
+}
+
+.exp-robot-slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Robot Column Layout ─────────────────────────────────── */
+.exp-robot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 60px;
+  padding: 40px 0;
+  min-width: 120px;
+}
+
+.exp-robot-col .exp-robot-slot {
+  width: 120px;
+  height: 160px;
+}
+
+/* Bottom robot slot */
+.exp-robot-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 0;
+}
+
+.exp-robot-bottom .exp-robot-slot {
+  width: 140px;
+  height: 130px;
+}
+
+/* ─── Responsive: hide robots on small screens ────────────── */
+@media (max-width: 1100px) {
+  .exp-robot-col { display: none; }
+  .exp-robot-bottom { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exp-robot,
+  .exp-robot * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

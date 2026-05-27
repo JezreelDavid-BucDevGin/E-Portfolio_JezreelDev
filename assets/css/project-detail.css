@@ -38,6 +38,9 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--bg-elevated);
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  scroll-padding-top: 84px;
 }
 
 ::-webkit-scrollbar {
@@ -59,6 +62,23 @@ body {
   color: var(--text-primary);
   line-height: 1.7;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.project-link:focus-visible,
+.footer-link:focus-visible,
+.back-btn:focus-visible {
+  outline: 2px solid rgba(0, 212, 255, 0.85);
+  outline-offset: 2px;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ─── Grid Overlay ────────────────────────────────────────── */
@@ -186,6 +206,7 @@ header {
 /* ─── Hero Section ────────────────────────────────────── */
 .project-hero {
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,6 +215,12 @@ header {
   padding: 100px 5% 60px;
   overflow: hidden;
   margin-top: 72px;
+}
+
+@supports (min-height: 100dvh) {
+  .project-hero {
+    min-height: 100dvh;
+  }
 }
 
 .hero-bg {
@@ -346,6 +373,7 @@ header {
   color: var(--text-muted);
   line-height: 1.8;
   max-width: 500px;
+  text-wrap: pretty;
 }
 
 .hero-actions {
@@ -372,6 +400,7 @@ header {
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  min-height: 44px;
 }
 
 .btn::before {
@@ -687,7 +716,6 @@ header {
   border: 1px solid var(--border);
   cursor: pointer;
   transition: var(--transition);
-  group;
 }
 
 .gallery-item:hover {
@@ -776,6 +804,7 @@ header {
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
 /* ─── Testimonials ─────────────────────────────────────– */
@@ -847,6 +876,8 @@ header {
   text-transform: uppercase;
   cursor: pointer;
   transition: var(--transition);
+  min-height: 44px;
+  line-height: 1.2;
 }
 
 .project-link:hover {
@@ -896,20 +927,54 @@ footer {
 }
 
 /* ─── Responsive ───────────────────────────────────────– */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   header {
     height: 60px;
+    padding: 0 16px;
   }
 
   .project-hero {
-    min-height: 80vh;
-    padding: 80px 5% 40px;
+    min-height: auto;
+    padding: 72px 16px 36px;
     margin-top: 60px;
   }
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .project-links {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .project-link {
+    width: 100%;
+    justify-content: center;
   }
 
   .info-grid {
@@ -918,6 +983,7 @@ footer {
 
   .results-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .gallery-grid {
@@ -925,12 +991,13 @@ footer {
   }
 
   .case-study-section {
-    margin: 60px 0;
+    margin: 48px 0;
+    padding: 0 16px;
   }
 
   .problem-section,
   .reflection-section {
-    padding: 24px;
+    padding: 20px;
   }
 
   .process-timeline {
@@ -939,5 +1006,72 @@ footer {
 
   .section-title {
     font-size: clamp(1.4rem, 4vw, 2rem);
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 430px) {
+  .project-hero {
+    padding-top: 80px;
+  }
+
+  .hero-actions .btn {
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .tech-stack {
+    gap: 8px;
+  }
+
+  .tech-stack span {
+    font-size: 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  header {
+    height: 54px;
+  }
+
+  .project-hero {
+    padding-top: 64px;
+    padding-bottom: 24px;
+    margin-top: 54px;
+  }
+
+  .hero-content {
+    gap: 20px;
+  }
+
+  .hero-actions {
+    margin-top: 2px;
   }
 }
